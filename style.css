@@ -11,15 +11,43 @@ body {
     animation: JodieC .9s ease-in-out;
 }
 
-.dance-images img {
-    width: 800px;
-    height: 800px;
+
+.images-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
 }
 
-.bubble-images img {
-    width: 900px;
-    height: 600px;
-    margin: 70px;
+.mushroom {
+    max-width: 630px;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.mushroom:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 20px rgba(224, 118, 173, 0.6)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.4));
+}
+
+.speech-bubble {
+    max-width: 470px;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+    .images-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .speech-bubble {
+        margin-top: 0;
+    }
 }
 
 
