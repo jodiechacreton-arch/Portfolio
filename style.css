@@ -1,0 +1,66 @@
+body {
+    background-color: rgb(133, 132, 189);
+    transform: scale(0.9);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+}
+
+.opening h1 {
+    box-sizing: border-box;
+    color: rgb(244, 237, 54);
+    text-align: center;
+    animation: JodieC .9s ease-in-out;
+}
+
+.dance-images img {
+    width: 800px;
+    height: 800px;
+}
+
+.bubble-images img {
+    width: 900px;
+    height: 600px;
+    margin: 70px;
+}
+
+
+@keyframes JodieC {
+    0% {
+        font-size: 0px;
+    }
+
+    100% {
+        font-size: px;
+    }
+}
+
+
+
+.nav-bar {
+    background-color: #fff;
+    border: 1px #e076ad;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 200px;
+    border-style: double;
+    border-width: 30px;
+
+
+}
+
+a {
+    display: inline-block;
+    background-color: #e076ad;
+    color: white;
+    border: 1px solid rgb(133, 132, 189);
+    border-width: 5px;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 15px;
+
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 40px;
+
+}

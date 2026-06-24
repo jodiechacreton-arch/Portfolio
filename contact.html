@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Jodie Chacreton</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            background-color: rgb(238, 224, 127);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .contact-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .contact-container h1 {
+            color: rgb(244, 237, 54);
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .contact-container p {
+            text-align: center;
+            color: rgb(133, 132, 189);
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: rgb(133, 132, 189);
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e076ad;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 1em;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: rgb(133, 132, 189);
+            box-shadow: 0 0 8px rgba(133, 132, 189, 0.3);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            background-color: #e076ad;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: 3px solid rgb(133, 132, 189);
+        }
+
+        .submit-btn:hover {
+            background-color: #d165a0;
+            transform: scale(1.02);
+        }
+
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
+
+        .nav-bar {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .nav-bar a {
+            display: inline-block;
+            background-color: #e076ad;
+            color: white;
+            border: 1px solid rgb(133, 132, 189);
+            border-width: 5px;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: bold;
+            margin: 10px 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav-bar">
+        <a href="index.html" id="home">Home</a>
+        <a href="about.html" id="about-me">About-me</a>
+        <a href="projects.html" id="projects">Projects</a>
+        <a href="contact.html" id="contact">Contact</a>
+    </div>
+
+    <div class="contact-section">
+        <div class="contact-container">
+            <h1>Get In Touch</h1>
+            <p>I'd love to hear from you! Send me a message.</p>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
