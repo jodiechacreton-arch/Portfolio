@@ -40,6 +40,30 @@ body {
     margin-top: 40px;
 }
 
+/* Clickable bubble button and confetti styles */
+.speech-bubble {
+    cursor: pointer;
+    transition: transform 220ms ease, filter 220ms ease;
+}
+
+.confetti-piece {
+    position: fixed;
+    width: 10px;
+    height: 14px;
+    border-radius: 2px;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+}
+
+body.zoom-out {
+    transform-origin: center center;
+    transition: transform 700ms ease, opacity 700ms ease;
+    transform: scale(1.12);
+    opacity: 0.95;
+}
+
 @media (max-width: 900px) {
     .images-row {
         flex-direction: column;
