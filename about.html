@@ -21,8 +21,7 @@
         }
 
         body {
-            margin: 0;
-            min-height: 100vh;
+            margin:0;
             background: radial-gradient(circle at top left, rgba(247,210,232,0.8), transparent 30%),
                         radial-gradient(circle at bottom right, rgba(232,255,216,0.85), transparent 32%),
                         linear-gradient(135deg, var(--rose), var(--cream) 28%, var(--mint) 58%, var(--peach));
@@ -32,8 +31,10 @@
 
         .page-shell {
             max-width: 1180px;
-            margin: 0 auto;
+            margin: 0px;
             padding: 28px 20px 48px;
+            margin-top: -180px;
+            margin-bottom: -150px;
         }
 
         .hero-card,
@@ -43,6 +44,12 @@
             border-radius: 32px;
             box-shadow: 0 12px 24px rgba(109,143,135,0.1);
             margin-top: 20px;
+        }
+        .last-card{
+    
+            border: 1px dotted rgba(109,143,135,0.2);
+            border-radius: 32px;
+            border-width: 20px;
         }
 
         .hero-card {
@@ -189,6 +196,7 @@
             margin: 0 0 12px;
             color: var(--forest);
             margin-top: 20px;
+            text-align: center;
         }
 
         p {
@@ -205,9 +213,19 @@
             color: var(--text);
             line-height: 1.7;
         }
+        .last-write-box{
+            text-align: center;
+            font-size: x-large;
+            margin-top: 50px;
+
+        }
 
         .wide {
             grid-column: 1 / -1;
+        }
+        
+        .caption{
+            text-align: center;
         }
 
         @media (max-width: 960px) {
@@ -232,9 +250,9 @@
 
         <section class="hero-card">
             <div>
-                <p class="eyebrow">curated memory journal</p>
+                <p class="eyebrow">My Short Memory Journal</p>
                 <h1>Can Gen Z...?</h1>
-                <p class="hero-intro">A dreamy, whimsical scrapbook-style About page with room for your photos, memories, and personal notes.</p>
+                <p class="hero-intro">Welcome to my whimsical scrapbook-style About Me page!<br> Let unpack all the special memories that make me who I am today.</p>
             </div>
 
             <a href="process.html" class="process-image-button" aria-label="Visit My Process">
@@ -254,7 +272,7 @@
                 <div class="about-me-text">
                 I am a driven and creative student with a passion for both innovation and service. As a young entrepreneur, I have built and managed my own small business, developing skills in leadership, marketing, customer service, and problem-solving. Alongside my entrepreneurial pursuits, I am committed to pursuing a career in cybersecurity, where I hope to combine analytical thinking with technology to make a meaningful impact. I enjoy taking on new challenges, whether through academics, business ventures, or creative projects, and I strive to approach every opportunity with determination, adaptability, and a willingness to learn. Through my experiences, I have developed strong communication skills, resilience, and a growth mindset that continue to shape both my personal and professional goals.
 </div>
-            <img src="Portfolio/Happy Sticker Sticker by mushroommovie.gif">
+           <img src="Happy Sticker Sticker by mushroommovie.gif" alt="" srcset="">
 
 
 </article>
@@ -269,42 +287,42 @@
                 <article class="card">
                     <h3>Memory one</h3>
                     <div class="image-placeholder small"><img src="baby_picture.jpg" ></div>
-                    <p class="caption">Caption for this moment</p>
+                    <p class="caption">Léogâne Commune in Haiti</p>
                     <div class="write-box">A place to write a memory, a special moment, or a turning point.</div>
                 </article>
 
                 <article class="card">
                     <h3>Memory two</h3>
                     <div class="image-placeholder small"><img src="FL_kid.png"></div>
-                    <p class="caption">Caption for this moment</p>
+                    <p class="caption">West Palm Beach City in Florida</p>
                     <div class="write-box">A second spot for a story, a value, or a small note about how things changed.</div>
                 </article>
 
                 <article class="card">
                     <h3>Memory three</h3>
                     <div class="image-placeholder small"><img src="Jodies-Beauty-Cosmetics.png" ></div>
-                    <p class="caption">Caption for this moment</p>
+                    <p class="caption">Jodie's Beauty Cosmetics</p>
                     <div class="write-box">A third place for reflection, growth, or a favorite story.</div>
                 </article>
 
                 <article class="card">
                     <h3>Memory four</h3>
                     <div class="image-placeholder small"><img src=""></div>
-                    <p class="caption">Caption for this moment</p>
+                    <p class="caption">A moment for the hair</p>
                     <div class="write-box">A second spot for a story, a value, or a small note about how things changed.</div>
                 </article>
 
                  <article class="card">
                     <h3>Memory five</h3>
                     <div class="image-placeholder small"><img src=""></div>
-                    <p class="caption">Caption for this moment</p>
+                    <p class="caption">Jodie's Cookies</p>
                     <div class="write-box">A second spot for a story, a value, or a small note about how things changed.</div>
                 </article>
 
                 <article class="card">
                     <h3>Memory six</h3>
                     <div class="image-placeholder small"><img src=""></div>
-                    <p class="caption">Caption for this moment</p>
+                    <p class="caption">Can Gen-Z Cook?</p>
                     <div class="write-box">A second spot for a story, a value, or a small note about how things changed.</div>
                 </article>
 
@@ -314,24 +332,21 @@
 
         <section class="content-grid">
             <article class="card">
-                <h3>Passions & hobbies</h3>
-                <div class="write-box">Add your hobbies, personal passions, and things that make your days feel meaningful.</div>
+                <h3>Hobbies: [Walking] [Dancing] [Biking] </h3>
+                <div class="write-box">
+                    <img src="hobby_walking.gif" alt="" srcset="">
+                    <img src="hobby_dance.gif" alt="" srcset="">
+                     <img src="hobby_biking.gif" alt="" srcset="">
+     
+                    
+
+
+                </div>
             </article>
 
-            <article class="card">
-                <h3>Nature notes</h3>
-                <div class="write-box">Write about your love of nature, favorite seasons, and the small wonders you keep close.</div>
-            </article>
-
-            <article class="card wide">
-                <h3>Favorites & fun facts</h3>
-                <div class="write-box">Add more space for extra stories, little favorites, or the soft details that feel like you.</div>
-            </article>
-        </section>
-
-        <section class="card">
+        <section class="last-card">
             <h2>Here’s the part I want you to remember</h2>
-            <div class="write-box">A final note, a gentle ending, or a short reflection to close the page.</div>
+            <div class="last-write-box">A final note, a gentle ending, or a short reflection to close the page.</div>
         </section>
     </div>
 </body>
