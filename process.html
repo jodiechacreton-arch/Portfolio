@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Process</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --rose: #f7d2e8;
+            --aqua: #d6f5ff;
+            --cream: #fff6ce;
+            --peach: #ffe1cb;
+            --forest: #6d8f87;
+            --text: #5a4f47;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: radial-gradient(circle at top right, rgba(232,255,216,0.8), transparent 30%),
+                        linear-gradient(135deg, var(--cream), var(--aqua) 45%, var(--peach));
+            color: var(--text);
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+
+        .page-shell {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 24px 18px 48px;
+        }
+
+       
+
+        .hero-card {
+            background: rgba(255,255,255,0.93);
+            padding: 26px;
+            border-radius: 34px;
+            border: 1px solid rgba(109,143,135,0.2);
+            box-shadow: 0 12px 26px rgba(109,143,135,0.12);
+            margin-bottom: 24px;
+        }
+
+        .eyebrow {
+            margin: 0 0 10px;
+            color: var(--forest);
+            letter-spacing: 0.2em;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0 0 14px;
+            font-size: clamp(2.1rem, 4vw, 3rem);
+            color: var(--forest);
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.7;
+            color: #6f5f55;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.88);
+            padding: 20px;
+            border-radius: 28px;
+            border: 1px solid rgba(109,143,135,0.18);
+            box-shadow: 0 10px 20px rgba(109,143,135,0.08);
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            margin-bottom: 14px;
+            color: var(--forest);
+        }
+
+        .write-box {
+            min-height: 140px;
+            padding: 16px;
+            border-radius: 22px;
+            border: 1px solid rgba(109,143,135,0.18);
+            background: rgba(255,246,218,0.72);
+            color: var(--text);
+            line-height: 1.75;
+        }
+
+        .content-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @media (max-width: 860px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-shell">
+        <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="process.html">Process & Project</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <section class="hero-card">
+            <p class="eyebrow">my process</p>
+            <h1>My Process</h1>
+            <p>This page is a soft scrapbook landing space for your future creative process notes, ideas, sketches, and steps.</p>
+        </section>
+
+        <section class="content-grid">
+            <article class="card">
+                <h2 class="section-title">What I’m thinking</h2>
+                <div class="write-box">Add your process notes, inspirations, and the story behind how you work.</div>
+            </article>
+
+            <article class="card">
+                <h2 class="section-title">Sketches & references</h2>
+                <div class="write-box">Leave room for images, moodboard pieces, and little notes about what inspires your process.</div>
+            </article>
+        </section>
+    </div>
+</body>
+
+</html>

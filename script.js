@@ -32,57 +32,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Bubble click handler
-    const bubble = document.getElementById('bubbleBtn');
-    if (bubble) {
-        bubble.addEventListener('click', function() {
-            triggerBubbleExplosion(bubble, 'about.html');
-        });
-        bubble.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                triggerBubbleExplosion(bubble, 'about.html');
-            }
-        });
-    }
-
-    function triggerBubbleExplosion(element, targetUrl) {
-        if (window.__bubbleNavigating) return;
-        window.__bubbleNavigating = true;
-        const rect = element.getBoundingClientRect();
-        const cx = rect.left + rect.width / 2;
-        const cy = rect.top + rect.height / 2;
-        const colors = ['#f06ea6', '#ffd6e0', '#fff7f3', '#ffb6d5', '#ffd1e8'];
-
-        for (let i = 0; i < 36; i++) {
-            createParticle(cx, cy, colors[Math.floor(Math.random() * colors.length)]);
-        }
-        document.body.classList.add('zoom-out');
-        setTimeout(function() {
-            window.location.href = targetUrl;
-        }, 700);
-    }
-
-    function createParticle(x, y, color) {
-        const p = document.createElement('div');
-        p.className = 'confetti-piece';
-        p.style.left = x + 'px';
-        p.style.top = y + 'px';
-        p.style.background = color;
-        document.body.appendChild(p);
-        const angle = Math.random() * Math.PI * 2;
-        const dist = 80 + Math.random() * 220;
-        const vx = Math.cos(angle) * dist;
-        const vy = Math.sin(angle) * dist;
-        const rot = Math.floor(Math.random() * 360);
-        requestAnimationFrame(function() {
-            p.style.transition = 'transform 700ms cubic-bezier(.2,.8,.2,1), opacity 700ms linear';
-            p.style.transform = `translate(-50%, -50%) translate(${vx}px, ${vy}px) rotate(${rot + 720}deg)`;
-            p.style.opacity = '0';
-        });
-        setTimeout(function() {
-            p.remove();
-        }, 800);
-    }
 });
 

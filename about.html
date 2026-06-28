@@ -1,36 +1,339 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Web Page</title>
+    <title>Can Gen Z...?</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-
     <style>
-        body {
-            background-color: white;
-        
+        :root {
+            --rose: #f7d2e8;
+            --lavender: #e3d7ff;
+            --aqua: #d6f5ff;
+            --mint: #e8ffd8;
+            --cream: #fff6ce;
+            --peach: #ffe1cb;
+            --sage: #bfe7d2;
+            --forest: #6d8f87;
+            --text: #5a4f47;
+            --muted: #7d6c66;
         }
 
-        img {
-            scale: 30%;
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: radial-gradient(circle at top left, rgba(247,210,232,0.8), transparent 30%),
+                        radial-gradient(circle at bottom right, rgba(232,255,216,0.85), transparent 32%),
+                        linear-gradient(135deg, var(--rose), var(--cream) 28%, var(--mint) 58%, var(--peach));
+            color: var(--text);
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+
+        .page-shell {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 28px 20px 48px;
+        }
+
+        .hero-card,
+        .card {
+            background: rgba(255,255,255,0.92);
+            border: 1px dashed rgba(109,143,135,0.2);
+            border-radius: 32px;
+            box-shadow: 0 12px 24px rgba(109,143,135,0.1);
+            margin-top: 20px;
+        }
+
+        .hero-card {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 30px;
+            align-items: center;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .eyebrow {
+            margin: 0 0 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.8rem;
+            color: var(--forest);
+        }
+
+        .hero-card h1 {
+            margin: 0 0 14px;
+            font-size: clamp(2.2rem, 4vw, 3.4rem);
+            line-height: 1.05;
+            color: var(--forest);
+        }
+
+        .hero-intro {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 640px;
+        }
+
+        .process-image-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--forest);
+            padding: 0;
+            background-color: #e3d7ff00;
+            border-color: rgba(220, 20, 60, 0);
+        }
+
+        .process-image-button img {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            border: 3px solid rgba(109, 143, 135, 0);
+            background: #fff;
+            object-fit: cover;
+            box-shadow: 0 10px 18px rgba(109,143,135,0.14);
+           
+        }
+
+        .process-image-button span {
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(255,246,218,0.98);
+            border: 1px solid rgba(109,143,135,0.25);
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .intro-grid,
+        .timeline-grid,
+        .content-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .intro-grid {
+            grid-template-columns: 1.4fr 1fr;
+        }
+
+        .timeline-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .content-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .photo-card {
+            min-height: 320px;
+            padding: 20px;
+        }
+
+       
+
+
+        .about-me-text {
+            margin-top: 12px;
+            font-size: 1.rem;
+            line-height: 2;
+            color: var(--text);
+           border-radius: 2px;
+            border-style: double;
+            border-width: 30px;
+            text-align: center;
+        }
+
+        .image-placeholder {
+            min-height: 220px;
+            border: 2px dashed rgba(109,143,135,0.28);
+            border-radius: 24px;
+            display: grid;
+            place-items: center;
+            padding: 22px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(255,246,218,0.6) 100%);
+            color: var(--muted);
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        .image-placeholder img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 16px;
+            object-fit: contain;
+        }
+
+        .image-placeholder.small {
+            min-height: 150px;
+        }
+
+        .image-placeholder.small img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 12px;
+            object-fit: contain;
+        }
+
+        .caption {
+            margin-top: 14px;
+            color: var(--muted);
+            font-style: italic;
+            font-size: 0.92rem;
+        }
+
+        h2,
+        h3 {
+            margin: 0 0 12px;
+            color: var(--forest);
+            margin-top: 20px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .write-box {
+            margin-top: 18px;
+            min-height: 110px;
+            padding: 14px 16px;
+            border-radius: 22px;
+            border: 1px solid rgba(109,143,135,0.18);
+            background: rgba(255,246,218,0.72);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .wide {
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 960px) {
+            .hero-card,
+            .intro-grid,
+            .timeline-grid,
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="img">
-        <img src="mushroom1.gif" alt="">
-        <img src="mushroom1.gif" alt="">
+    <div class="page-shell">
+        <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="process.html">Process & Project</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <section class="hero-card">
+            <div>
+                <p class="eyebrow">curated memory journal</p>
+                <h1>Can Gen Z...?</h1>
+                <p class="hero-intro">A dreamy, whimsical scrapbook-style About page with room for your photos, memories, and personal notes.</p>
+            </div>
+
+            <a href="process.html" class="process-image-button" aria-label="Visit My Process">
+                <img src="typing.gif" alt="My Process button image">
+                <span>My Process</span>
+            </a>
+        </section>
+
+        <section class="intro-grid">
+            <article class="card photo-card">
+                <div class="image-placeholder"><img src="professional-photo.png" alt="Professional photo of Jodie" class="prof-photo"></div>
+                <p class="caption">Jodie Chacreton</p>
+            </article>
+
+            <article class="about-me-card">
+
+                <div class="about-me-text">
+                I am a driven and creative student with a passion for both innovation and service. As a young entrepreneur, I have built and managed my own small business, developing skills in leadership, marketing, customer service, and problem-solving. Alongside my entrepreneurial pursuits, I am committed to pursuing a career in cybersecurity, where I hope to combine analytical thinking with technology to make a meaningful impact. I enjoy taking on new challenges, whether through academics, business ventures, or creative projects, and I strive to approach every opportunity with determination, adaptability, and a willingness to learn. Through my experiences, I have developed strong communication skills, resilience, and a growth mindset that continue to shape both my personal and professional goals.
+</div>
+            <img src="Portfolio/Happy Sticker Sticker by mushroommovie.gif">
 
 
+</article>
+        </section>
+
+        <section class="timeline-section">
+            <div class="card">
+                <h2>How I got here</h2>
+            </div>
+
+            <div class="timeline-grid">
+                <article class="card">
+                    <h3>Memory one</h3>
+                    <div class="image-placeholder small"><img src="baby_picture.jpg" ></div>
+                    <p class="caption">Caption for this moment</p>
+                    <div class="write-box">A place to write a memory, a special moment, or a turning point.</div>
+                </article>
+
+                <article class="card">
+                    <h3>Memory two</h3>
+                    <div class="image-placeholder small"><img src="FL_kid.png"></div>
+                    <p class="caption">Caption for this moment</p>
+                    <div class="write-box">A second spot for a story, a value, or a small note about how things changed.</div>
+                </article>
+
+                <article class="card">
+                    <h3>Memory three</h3>
+                    <div class="image-placeholder small"><img src="Jodies-Beauty-Cosmetics.png" ></div>
+                    <p class="caption">Caption for this moment</p>
+                    <div class="write-box">A third place for reflection, growth, or a favorite story.</div>
+                </article>
+
+                <article class="card">
+                    <h3>Memory four</h3>
+                    <div class="image-placeholder small"><img src=""></div>
+                    <p class="caption">Caption for this moment</p>
+                    <div class="write-box">A second spot for a story, a value, or a small note about how things changed.</div>
+                </article>
+
+                 <article class="card">
+                    <h3>Memory five</h3>
+                    <div class="image-placeholder small"><img src=""></div>
+                    <p class="caption">Caption for this moment</p>
+                    <div class="write-box">A second spot for a story, a value, or a small note about how things changed.</div>
+                </article>
+
+                <article class="card">
+                    <h3>Memory six</h3>
+                    <div class="image-placeholder small"><img src=""></div>
+                    <p class="caption">Caption for this moment</p>
+                    <div class="write-box">A second spot for a story, a value, or a small note about how things changed.</div>
+                </article>
+
+
+            </div>
+        </section>
+
+        <section class="content-grid">
+            <article class="card">
+                <h3>Passions & hobbies</h3>
+                <div class="write-box">Add your hobbies, personal passions, and things that make your days feel meaningful.</div>
+            </article>
+
+            <article class="card">
+                <h3>Nature notes</h3>
+                <div class="write-box">Write about your love of nature, favorite seasons, and the small wonders you keep close.</div>
+            </article>
+
+            <article class="card wide">
+                <h3>Favorites & fun facts</h3>
+                <div class="write-box">Add more space for extra stories, little favorites, or the soft details that feel like you.</div>
+            </article>
+        </section>
+
+        <section class="card">
+            <h2>Here’s the part I want you to remember</h2>
+            <div class="write-box">A final note, a gentle ending, or a short reflection to close the page.</div>
+        </section>
     </div>
-
-
-
-
 </body>
 
 </html>
