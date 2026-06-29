@@ -9,11 +9,32 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js" defer></script>
     <style>
-        body {
-            background-color: rgb(238, 224, 127);
-            margin: 0;
-            font-family: Arial, sans-serif;
+       
+        :root {
+            --rose: #f7d2e8;
+            --lavender: #e3d7ff;
+            --aqua: #d6f5ff;
+            --mint: #e8ffd8;
+            --cream: #fff6ce;
+            --peach: #ffe1cb;
+            --sage: #bfe7d2;
+            --forest: #6d8f87;
+            --text: #5a4f47;
+            --muted: #7d6c66;
         }
+
+       
+       body {
+            margin:0;
+            background: radial-gradient(circle at top left, rgba(247,210,232,0.8), transparent 30%),
+                        radial-gradient(circle at bottom right, rgba(232,255,216,0.85), transparent 32%),
+                        linear-gradient(135deg, var(--rose), var(--cream) 28%, var(--mint) 58%, var(--peach));
+            color: var(--text);
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+
+
+
 
         .contact-section {
             display: flex;
