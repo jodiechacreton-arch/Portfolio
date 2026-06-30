@@ -7,11 +7,11 @@ if (typeof window !== 'undefined' && window.emailjs && typeof window.emailjs.ini
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Contact form submission
     const contactForm = document.getElementById('contactForm');
     if (contactForm && window.emailjs && typeof window.emailjs.send === 'function') {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 from_email: email,
                 subject: subject,
                 message: message
-            }).then(function() {
+            }).then(function () {
                 alert(`Thank you ${name}! Your message has been sent. I'll get back to you at ${email} soon!`);
                 contactForm.reset();
-            }, function(error) {
+            }, function (error) {
                 alert('Failed to send message. Please try again.');
                 console.error('EmailJS error:', error);
             });
@@ -33,4 +33,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
+// Audio Implementation
+const sound = new Audio("./Audio.m4a");
+const hoverBox = document.getElementById("mushroom");
+
+hoverBox.addEventListener("mouseenter", () => {
+    sound.currentTime = 0;
+    sound.play().catch(err => console.log(err));
+});
+
+hoverBox.addEventListener("mouseleave", () => {
+    sound.pause();
+    sound.currentTime = 0;
+});
+
+
 
