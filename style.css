@@ -12,7 +12,7 @@ body {
     font-size: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -91,7 +91,7 @@ a {
 
 a:hover {
     background-color: #ffffff;
-    color:#d65c9e;
+    color: #d65c9e;
     border-color: white;
     transform: scale(1.05);
     transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
@@ -99,19 +99,19 @@ a:hover {
 
 .click-me {
     background: #f7deb5;
-    border: 14px double #4a2f11; 
-    border-top: 12px double #dc77af; 
+    border: 14px double #4a2f11;
+    border-top: 12px double #dc77af;
     border-radius: 12px;
     padding: 25px;
     width: 320px;
     display: inline-block;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
     align-items: center;
 }
 
 .click-me:hover {
-    transform: translateY(-8px); 
+    transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
 }
 
@@ -126,7 +126,7 @@ a:hover {
     font-size: 20px;
     line-height: 1.5;
     color: rgb(224 118 173);
-    font-weight:bolder;
+    font-weight: bolder;
 }
 
 .container {
@@ -134,5 +134,59 @@ a:hover {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    /* height: 100vh; */
+
+}
+
+.skill {
+    background-color: #fff;
+    border: 20px double #ff8fc3;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    display: none;
+}
+
+.skill img {
+    width: 450px;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    display:grid;
+    gap: 20px;
+}
+
+.skill h1 {
+    text-align: center;
+    color: #e076ad;
+    font-size: 70px;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px #e4e442;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    
+}
+
+.return-btn {
+    text-align: center;
+    color: #e076ad;
+    font-size: 40px;
+    margin-bottom: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px #e4e442;
+    background-color: #fff;
+    border: 1px double #e076ad;
+    border-width: 10px;
+    text-align: center;
+}
+
+.goals {
+    background-color: #fff;
+    border: 20px double #ff8fc3;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    display: none;
 }

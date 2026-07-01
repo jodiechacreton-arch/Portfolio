@@ -7,6 +7,7 @@ if (typeof window !== 'undefined' && window.emailjs && typeof window.emailjs.ini
     }
 }
 
+
 document.addEventListener('DOMContentLoaded', function () {
     // Contact form submission
     const contactForm = document.getElementById('contactForm');
@@ -49,4 +50,42 @@ hoverBox.addEventListener("mouseleave", () => {
 });
 
 
+// let startBtn = document.getElementsByClassName("start-btn")[0];
+let startBtn = document.querySelector(".start-btn");
+let skillsBtn = document.querySelector(".skills-btn");
+let goalsBtn = document.querySelector(".goals-btn");
+let skill = document.querySelector(".skill");
 
+let returnBtn = document.querySelector(".return-btn");
+
+
+let opening = document.querySelector(".opening");
+let aboutMe = document.querySelector(".page-shell");
+
+let goals = document.querySelector(".goals");
+
+
+startBtn.addEventListener("click", function() {
+   window.location.href = "about.html";
+});
+
+skillsBtn.addEventListener('click', function(){
+    opening.style.display = "none";
+    skill.style.display = "block";
+});
+
+
+returnBtn.addEventListener('click', function(){
+    skill.style.display = "none";
+    opening.style.display = "block";
+});
+
+goalsBtn.addEventListener('click', function(){
+    opening.style.display = "none";
+    goals.style.display = "block";
+});
+
+returnBtn.addEventListener('click', function(){
+    goals.style.display = "none";
+    opening.style.display = "block";
+});
