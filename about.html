@@ -21,10 +21,10 @@
         }
 
         body {
-            margin:0;
-            background: radial-gradient(circle at top left, rgba(247,210,232,0.8), transparent 30%),
-                        radial-gradient(circle at bottom right, rgba(232,255,216,0.85), transparent 32%),
-                        linear-gradient(135deg, var(--rose), var(--cream) 28%, var(--mint) 58%, var(--peach));
+            margin: 0;
+            background: radial-gradient(circle at top left, rgba(247, 210, 232, 0.8), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(232, 255, 216, 0.85), transparent 32%),
+                linear-gradient(135deg, var(--rose), var(--cream) 28%, var(--mint) 58%, var(--peach));
             color: var(--text);
             font-family: Georgia, 'Times New Roman', serif;
         }
@@ -39,17 +39,19 @@
 
         .hero-card,
         .card {
-            background: rgba(255,255,255,0.92);
-            border: 1px dashed rgba(109,143,135,0.2);
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px dashed rgba(109, 143, 135, 0.2);
             border-radius: 32px;
-            box-shadow: 0 12px 24px rgba(109,143,135,0.1);
-            margin-top: 20px;
+            box-shadow: 0 12px 24px rgba(109, 143, 135, 0.1);
+            margin-top: 40px;
         }
-        .last-card{
-    
-            border: 1px dotted rgba(109,143,135,0.2);
+
+        .last-card {
+
+            border: 1px dotted rgba(109, 143, 135, 0.2);
             border-radius: 32px;
             border-width: 20px;
+            margin-top: 40px;
         }
 
         .hero-card {
@@ -102,15 +104,15 @@
             border: 3px solid rgba(109, 143, 135, 0);
             background: #fff;
             object-fit: cover;
-            box-shadow: 0 10px 18px rgba(109,143,135,0.14);
-           
+            box-shadow: 0 10px 18px rgba(109, 143, 135, 0.14);
+
         }
 
         .process-image-button span {
             padding: 8px 14px;
             border-radius: 999px;
-            background: rgba(255,246,218,0.98);
-            border: 1px solid rgba(109,143,135,0.25);
+            background: rgba(255, 246, 218, 0.98);
+            border: 1px solid rgba(109, 143, 135, 0.25);
             font-size: 0.95rem;
             font-weight: 700;
         }
@@ -139,7 +141,7 @@
             padding: 20px;
         }
 
-       
+
 
 
         .about-me-text {
@@ -147,20 +149,21 @@
             font-size: 1.rem;
             line-height: 2;
             color: var(--text);
-           border-radius: 2px;
+            border-radius: 2px;
             border-style: double;
             border-width: 30px;
             text-align: center;
+            padding: 5%;
         }
 
         .image-placeholder {
             min-height: 220px;
-            border: 2px dashed rgba(109,143,135,0.28);
+            border: 2px dashed rgba(109, 143, 135, 0.28);
             border-radius: 24px;
             display: grid;
             place-items: center;
             padding: 22px;
-            background: linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(255,246,218,0.6) 100%);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 246, 218, 0.6) 100%);
             color: var(--muted);
             font-size: 0.95rem;
             text-align: center;
@@ -190,6 +193,14 @@
             font-style: italic;
             font-size: 0.92rem;
         }
+        .caption1 {
+            margin-top: 14px;
+            color: var(--muted);
+            font-style: italic;
+            font-size: 50px;
+            text-align: center;
+           
+        }
 
         h2,
         h3 {
@@ -208,12 +219,13 @@
             min-height: 110px;
             padding: 14px 16px;
             border-radius: 22px;
-            border: 1px solid rgba(109,143,135,0.18);
-            background: rgba(255,246,218,0.72);
+            border: 1px solid rgba(109, 143, 135, 0.18);
+            background: rgba(255, 246, 218, 0.72);
             color: var(--text);
             line-height: 1.7;
         }
-        .last-write-box{
+
+        .last-write-box {
             text-align: center;
             font-size: x-large;
             margin-top: 50px;
@@ -223,12 +235,13 @@
         .wide {
             grid-column: 1 / -1;
         }
-        
-        .caption{
+
+        .caption {
             text-align: center;
         }
 
         @media (max-width: 960px) {
+
             .hero-card,
             .intro-grid,
             .timeline-grid,
@@ -236,6 +249,14 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .about-me-card img {
+          width: 105%;
+        }
+        
+    
+     
+
     </style>
 </head>
 
@@ -252,7 +273,8 @@
             <div>
                 <p class="eyebrow">My Short Memory Journal</p>
                 <h1>Can Gen Z...?</h1>
-                <p class="hero-intro">Welcome to my whimsical scrapbook-style About Me page!<br> Let unpack all the special memories that make me who I am today.</p>
+                <p class="hero-intro">Welcome to my whimsical scrapbook-style About Me page!<br> Let unpack all the
+                    special memories that make me who I am today.</p>
             </div>
 
             <a href="process.html" class="process-image-button" aria-label="Visit My Process">
@@ -262,20 +284,26 @@
         </section>
 
         <section class="intro-grid">
-            <article class="card photo-card">
-                <div class="image-placeholder"><img src="professional-photo.png" alt="Professional photo of Jodie" class="prof-photo"></div>
-                <p class="caption">Jodie Chacreton</p>
+            <article class="cardphoto-card">
+                <div class="image-placeholder"><img src="professional-photo.png" alt="Professional photo of Jodie"
+                        class="prof-photo"></div>
+                <p class="caption1">Jodie Chacreton</p>
             </article>
 
             <article class="about-me-card">
-
                 <div class="about-me-text">
-                I am a driven and creative student with a passion for both innovation and service. As a young entrepreneur, I have built and managed my own small business, developing skills in leadership, marketing, customer service, and problem-solving. Alongside my entrepreneurial pursuits, I am committed to pursuing a career in cybersecurity, where I hope to combine analytical thinking with technology to make a meaningful impact. I enjoy taking on new challenges, whether through academics, business ventures, or creative projects, and I strive to approach every opportunity with determination, adaptability, and a willingness to learn. Through my experiences, I have developed strong communication skills, resilience, and a growth mindset that continue to shape both my personal and professional goals.
-</div>
-           <img src="Happy Sticker Sticker by mushroommovie.gif" alt="" srcset="">
-
-
-</article>
+                    I am a driven and creative student with a passion for both innovation and service. As a young
+                    entrepreneur, I have built and managed my own small business, developing skills in leadership,
+                    marketing, customer service, and problem-solving. Alongside my entrepreneurial pursuits, I am
+                    committed to pursuing a career in cybersecurity, where I hope to combine analytical thinking with
+                    technology to make a meaningful impact. I enjoy taking on new challenges, whether through academics,
+                    business ventures, or creative projects, and I strive to approach every opportunity with
+                    determination, adaptability, and a willingness to learn. Through my experiences, I have developed
+                    strong communication skills, resilience, and a growth mindset that continue to shape both my
+                    personal and professional goals.
+                </div>
+                <img src="Happy Sticker Sticker by mushroommovie.gif" alt="" srcset="">
+            </article>
         </section>
 
         <section class="timeline-section">
@@ -287,9 +315,10 @@
             <div class="timeline-grid">
                 <article class="card">
                     <h3>Memory one</h3>
-                    <div class="image-placeholder small"><img src="baby_picture.jpg" ></div>
+                    <div class="image-placeholder small"><img src="baby_picture.jpg"></div>
                     <p class="caption">Léogâne Commune in Haiti</p>
-                    <div class="write-box">This is me during my early childhood in Léogâne Commune, Haiti, where my life began and many of my earliest memories were made.</div>
+                    <div class="write-box">This is me during my early childhood in Léogâne Commune, Haiti, where my life
+                        began and many of my earliest memories were made.</div>
                 </article>
 
 
@@ -298,43 +327,51 @@
                     <h3>Memory two</h3>
                     <div class="image-placeholder small"><img src="FL_kid.png"></div>
                     <p class="caption">West Palm Beach City in Florida</p>
-                    <div class="write-box">This picture captures a happy moment during my time in West Palm Beach, where I experienced new opportunities and created lasting memories.</div>
+                    <div class="write-box">This picture captures a happy moment during my time in West Palm Beach, where
+                        I experienced new opportunities and created lasting memories.</div>
                 </article>
 
 
 
                 <article class="card">
                     <h3>Memory three</h3>
-                    <div class="image-placeholder small"><img src="Jodies-Beauty-Cosmetics.png" ></div>
+                    <div class="image-placeholder small"><img src="Jodies-Beauty-Cosmetics.png"></div>
                     <p class="caption">Jodie's Beauty Cosmetics</p>
-                    <div class="write-box">This image represents the beginning of my entrepreneurial journey through Jodie's Beauty Cosmetics, my first business, where I learned the value of creativity, branding, and serving customers.</div>
+                    <div class="write-box">This image represents the beginning of my entrepreneurial journey through
+                        Jodie's Beauty Cosmetics, my first business, where I learned the value of creativity, branding,
+                        and serving customers.</div>
                 </article>
 
 
 
-               <article class="card">
+                <article class="card">
                     <h3>Memory four</h3>
                     <div class="image-placeholder small"><img src="hair.png"></div>
                     <p class="caption">A moment for the hair</p>
-                    <div class="write-box">This photo showcases my hairstyling work through my second business, where I developed my skills, creativity, and attention to detail while helping clients look and feel their best.</div>
+                    <div class="write-box">This photo showcases my hairstyling work through my second business, where I
+                        developed my skills, creativity, and attention to detail while helping clients look and feel
+                        their best.</div>
                 </article>
 
 
 
-                 <article class="card">
+                <article class="card">
                     <h3>Memory five</h3>
                     <div class="image-placeholder small"><img src="image.png"></div>
                     <p class="caption">Jodie's Cookies</p>
-                    <div class="write-box">Jodie's Cookies is my baking business, where I first sold cookies door-to-door and now continue growing by selling them at school while expanding my customer base.</div>
+                    <div class="write-box">Jodie's Cookies is my baking business, where I first sold cookies
+                        door-to-door and now continue growing by selling them at school while expanding my customer
+                        base.</div>
                 </article>
 
 
 
                 <article class="card">
                     <h3>Memory six</h3>
-                    <div class="image-placeholder small"><img src="https://mail.google.com/mail/u/0?ui=2&ik=83203c60de&attid=0.3&permmsgid=msg-f:1869286402062207060&th=19f10a142a62c854&view=fimg&fur=ip&permmsgid=msg-f:1869286402062207060&sz=s0-l75-ft&attbid=ANGjdJ882hmrDGlsOFOhj-snUDcuL6_jRf0zODxtUYZGZXPg8PyfXu9UDkE32eNPyhPD1ulSGh-09rGmRqGDIqlwDni5caEPwccaTBF0P0sP98Mt2-ad-gbAjuyz0OU&disp=emb&realattid=ii_mqyfueqx3&zw"></div>
+                    <div class="image-placeholder small"><img src="CGZC.png"></div>
                     <p class="caption">Can Gen-Z Cook?</p>
-                    <div class="write-box">Can Gen-Z Cook? is my YouTube channel, where I share cooking content, creative ideas, and my passion for making food fun and engaging for others.</div>
+                    <div class="write-box">Can Gen-Z Cook? is my YouTube channel, where I share cooking content,
+                        creative ideas, and my passion for making food fun and engaging for others.</div>
                 </article>
             </div>
         </section>
@@ -347,31 +384,33 @@
                 <div class="write-box">
                     <img src="hobby_walking.gif" alt="" srcset="">
                     <img src="hobby_dance.gif" alt="" srcset="">
-                     <img src="hobby_biking.gif" alt="" srcset="">
+                    <img src="hobby_biking.gif" alt="" srcset="">
                 </div>
             </article>
 
 
 
-        <section class="last-card">
-            <h2>Here's the Part I Want You to Remember</h2>
+            <section class="last-card">
+                <h2>Here's the Part I Want You to Remember</h2>
 
 
-            <div class="last-write-box">
-                <p>Looking back, I realized I was really documenting my life. Every photo, every business, every success, every mistake, and every new experience became part of the person I'm still becoming.</p>
+                <div class="last-write-box">
+                    <p>Looking back, I realized I was really documenting my life. Every photo, every business, every
+                        success, every mistake, and every new experience became part of the person I'm still becoming.
+                    </p>
 
-                <br><br>
-                <h3>Living is part of the process.</h3>
-                <br>
+                    <br><br>
+                    <h3>Living is part of the process.</h3>
+                    <br>
 
-                <ul>
-                    <li>Trying something new is part of the process.</li>
-                    <li>Making mistakes is part of the process.</li>
-                    <li>Failing is part of the process.</li>
-                    <li>Changing directions is part of the process.</li>
-                </ul>
+                    <ul>
+                        <li>Trying something new is part of the process.</li>
+                        <li>Making mistakes is part of the process.</li>
+                        <li>Failing is part of the process.</li>
+                        <li>Changing directions is part of the process.</li>
+                    </ul>
 
-          
+
 
                     <br>
 
@@ -379,32 +418,35 @@
 
                     <br>
 
-<p>
-Can Gen Z become entrepreneurs?<br><br>
+                    <p>
+                        Can Gen Z become entrepreneurs?<br><br>
 
-Can Gen Z develop leadership, communication, customer service, and marketing skills?<br><br>
+                        Can Gen Z develop leadership, communication, customer service, and marketing skills?<br><br>
 
-Can Gen Z build businesses while balancing school and life?<br><br>
+                        Can Gen Z build businesses while balancing school and life?<br><br>
 
-Can Gen Z create, fail, learn, and keep going?
-</p>
+                        Can Gen Z create, fail, learn, and keep going?
+                    </p>
 
-<br><br>
+                    <br><br>
 
-<p>
-I believe the answer is <strong>yes.</strong>
-</p>
+                    <p>
+                        I believe the answer is <strong>yes.</strong>
+                    </p>
 
-<br><br>
+                    <br><br>
 
-<p>
-This portfolio isn't meant to show that I have everything figured out. It's proof that I'm willing to keep learning, keep building, and keep growing. Every experience here represents another step in my journey, and I'm excited to see where the next one leads.
-</p>
+                    <p>
+                        This portfolio isn't meant to show that I have everything figured out. It's proof that I'm
+                        willing to keep learning, keep building, and keep growing. Every experience here represents
+                        another step in my journey, and I'm excited to see where the next one leads.
+                    </p>
 
-<br><br>
+                    <br><br>
 
-<p><em>Sometimes, becoming who you're meant to be starts with simply living.</em></p></div>
-        </section>
+                    <p><em>Sometimes, becoming who you're meant to be starts with simply living.</em></p>
+                </div>
+            </section>
     </div>
 </body>
 
