@@ -120,7 +120,9 @@ a:hover {
     font-size: 20px;
     margin-bottom: 12px;
     font-weight: bold;
+
 }
+
 
 .click-me p {
     font-size: 20px;
@@ -181,6 +183,35 @@ a:hover {
     text-align: center;
 }
 
+.return-btn:hover {
+    background-color: #e076ad;
+    color: #fff;
+    border-color: #fff;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.return-btn2 {
+    text-align: center;
+    color: #e076ad;
+    font-size: 40px;
+    margin-bottom: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px #e4e442;
+    background-color: #fff;
+    border: 1px double #e076ad;
+    border-width: 10px;
+    text-align: center;
+}
+
+.return-btn2:hover {
+    background-color: #e076ad;
+    color: #fff;
+    border-color: #fff;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
 .goals {
     background-color: #fff;
     border: 20px double #ff8fc3;
@@ -189,4 +220,80 @@ a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
     display: none;
+}
+.goals img {
+    width: 450px;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    display:grid;
+    
+}
+
+
+.start-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #e076ad;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.start-btn:hover {
+    background-color: #d65c9e;
+}
+
+.skills-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #e076ad;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.skills-btn:hover {
+    background-color: #d65c9e;
+}
+
+.goals-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #e076ad;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.goals-btn:hover {
+    background-color: #d65c9e;
+}
+.goals h1 {
+    text-align: center;
+    color: #e076ad;
+    font-size: 70px;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px #e4e442;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    
+}
+.goals h2 {
+    text-align: center;
+    color: #e076ad;
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px #e4e442;
+  
+    
 }

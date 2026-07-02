@@ -57,6 +57,7 @@ let goalsBtn = document.querySelector(".goals-btn");
 let skill = document.querySelector(".skill");
 
 let returnBtn = document.querySelector(".return-btn");
+let returnBtn2 = document.querySelector(".return-btn2");
 
 
 let opening = document.querySelector(".opening");
@@ -85,7 +86,7 @@ goalsBtn.addEventListener('click', function(){
     goals.style.display = "block";
 });
 
-returnBtn.addEventListener('click', function(){
+returnBtn2.addEventListener('click', function(){
     goals.style.display = "none";
     opening.style.display = "block";
 });
