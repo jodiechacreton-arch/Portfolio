@@ -1,4 +1,7 @@
-﻿// Initialize EmailJS if available (some pages don't load the EmailJS SDK)
+﻿
+// Initialize EmailJS so the website can send emails directly
+// from the contact form. If initialization fails, an error
+// message is logged to the console.
 if (typeof window !== 'undefined' && window.emailjs && typeof window.emailjs.init === 'function') {
     try {
         emailjs.init({ publicKey: '7JT5eOoO4dWaFc1CH' });
@@ -9,24 +12,44 @@ if (typeof window !== 'undefined' && window.emailjs && typeof window.emailjs.ini
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Contact form submission
+    
+    // Wait until the webpage has fully loaded before accessing
+    // the contact form and adding event listeners.
+    // Get the contact form and check that EmailJS is available
+
     const contactForm = document.getElementById('contactForm');
     if (contactForm && window.emailjs && typeof window.emailjs.send === 'function') {
-        contactForm.addEventListener('submit', function (e) {
+   
+    // Listen for when the user submits the contact form
+    contactForm.addEventListener('submit', function (e) {
+    
+    // Prevent the page from refreshing after submission
             e.preventDefault();
+
+    // Collect the user's input from each form field
+
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
+
+    // Send the form information using EmailJS
+
             emailjs.send('service_ccpla8u', 'template_4q23zft', {
                 from_name: name,
                 from_email: email,
                 subject: subject,
                 message: message
             }).then(function () {
+
+    // Display a success message and clear the form
+
                 alert(`Thank you ${name}! Your message has been sent. I'll get back to you at ${email} soon!`);
                 contactForm.reset();
             }, function (error) {
+            
+    // Notify the user if the email could not be sent
+
                 alert('Failed to send message. Please try again.');
                 console.error('EmailJS error:', error);
             });
@@ -36,17 +59,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Audio Implementation
+// Load the audio file
 const sound = new Audio("./Audio.m4a");
+// Select the image with the id "mushroom"
 const hoverBox = document.getElementById("mushroom");
-
+// Play the audio when the mouse enters the image
 hoverBox.addEventListener("mouseenter", () => {
-    sound.currentTime = 0;
-    sound.play().catch(err => console.log(err));
+    sound.currentTime = 0; // Restart the audio from the beginning
+    sound.play().catch(err => console.log(err)); // there if is an error in playing the audio, it will be logged to the console
 });
 
 hoverBox.addEventListener("mouseleave", () => {
-    sound.pause();
-    sound.currentTime = 0;
+    sound.pause();  // Stop the audio
+    sound.currentTime = 0; // Reset it to the beginning
 });
 
 
